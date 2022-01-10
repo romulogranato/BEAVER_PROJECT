@@ -1,0 +1,2 @@
+# SWITCH_SCOMRED_PROJECT
+Respositório GRUPO 2 - Projecto SCOMRED
