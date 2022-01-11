@@ -1,0 +1,30 @@
+.container{
+    max-width: 700px;
+    width: 100%;
+    background:rgba(255, 255, 255, 0.849);
+    padding: 100px 100px; /* o da esquerda refere-se ao de cima e o segundo ao da esquerda*/
+    border-radius: 5px;
+
+
+}
+
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+
+}
+
+.container.title{
+    position:relative;
+}
+
+.container.title::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom:0;
+    height: 3px;
+    width: 30px;
+    background-color: repeating-linear-gradient(90deg, rgb(83, 199, 5),rgb(243, 168, 6));
+}
