@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image:url("/images/fundo.png");
+    width: 100vw;
+    height: 100vh;
+
+}
+
+input {
+    border-radius: 2px;
+    border: none;
+    width: 100%;
+    font-size: 20px;
+}
+
+.reg {
+    font-size: 20px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+button {
+    background-color: lightgray;
+    border-radius: 6px;
+    color: whitesmoke;
+    width: 100%;
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+}
