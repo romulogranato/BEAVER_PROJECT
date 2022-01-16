@@ -5,67 +5,81 @@
 
         <title> Responsive Registration Form </title>
         
-        <link rel="stylesheet" href="CSS/Register.css">
+        <link rel="stylesheet" href="./Registo.css">
+        <link href= "css/bootstrap.min.css"/>
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
         <meta name="viewport" content="width=device-width", initial-scale=1.0>
     
     </head>
 
     <body>
-        <div class="container">
-            <div class="title"> Registration</div> <br>
-            <form action="#">
-                <div class="user-details">
-                    <div class="input-box">
-                        <span class="details">First Name </span>
-                        <input type="text" placeholder="Type your first name" required> 
-                
-                    </div>
+        <div class="register_screen">
+              <div class= "title"> SIGN UP </div>
 
-                    <br>
-
-                    <div class="input-box">
-                        <span class="details">Last Name </span>
-                        <input type="text" placeholder="Type your last name" required> 
-                
-                    </div>
-
-                    <br>
-
-                    <div class="input-box">
-                        <span class="details">Email </span>
-                        <input type="text" placeholder="Type your email" required> 
-                
-                    </div>
-
-                    <br>
-
-                    <div class="input-box">
-                        <span class="details">Password </span>
-                        <input type="text" placeholder="Enter your password" required> 
-                
-                    </div>
-
-                    <br>
-
-                    <div class="input-box">
-                        <span class="details">Password Confirmation</span>
-                        <input type="text" placeholder="Confirm your password" required> 
-                
-                    </div>
-
-                    <br>
-
-                    <div class="button">
-                        <input type="submit" value="Register">
-    
-                
-                    </div>
-
-                
-
-                </div>
-
-            </form>
+              <br>
+              <br>
             
-        </div>
+                  
+                        <label for="Name">Username:</label> <input id="textboxid" placeholder="Type your first and last name" aria-required="true" /> 
+                        <br>
+                        <br>
+
+                        <label for="function">Function:</labe> <input  placeholder="Function" aria-required="true" /> 
+                        <br>
+                        <br>
+                
+
+                        <label for="email"> Email:</label> <input  placeholder="Type your email" aria-required="true"> 
+                        <br>
+                        <br>
+
+
+                       <label> Password:</label> <input type="password" placeholder="Type your password" aria-required="true">
+                        <br>
+                        <br>
+
+
+                        <label> Confirm Password:</label> <input type="password" placeholder="Confirm password" aria-required="true"> 
+                        <br>
+                        <br>
+
+
+                        <label> Photo: </label> 
+
+                            <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <input lang="en"class="fileToUpload" type="file" value= "Choose Image" name="fileToUpload" >
+                            <input type="submit" value="Upload Image" name="submit">
+
+                        <br>
+                        <br>
+
+                        <input type="checkbox" name="check" checked> 
+                        <label for="check"> Beaver team has the commitment to protect your data and use them only 
+                        for internal data analysis. Please tick the box to proceed.</label>
+                        
+
+                        <br>
+                        <br>
+
+                    
+                        <a hreaf=CONFIRM_EMAIL.html> <button type="button" class="btn btn-primary">  CONFIRM </button> </a> 
+
+                 </div>
+                          
+ </body>
+
+ </html>
+
+ <!--FALTA:
+    1) A ligação não está a funcionar; 
+    2) Não está a ser possivel aumentar os retangulos dos inputs; 
+    3) Quando se faz upload da foto, o resto do conteúdo é eliminado; 
+    4) O "required" como obrigatório não está a funcionar-->
+
+
+
+ 
+
+ 
         

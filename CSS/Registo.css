@@ -1,0 +1,62 @@
+
+body {
+    background-image: url("/images/bolotas.jpeg");
+    background-size: 1500px 1500px;
+}
+
+.register_screen {
+    background-color: rgba(221, 97, 14, 0.7);
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    border-radius: 15px;
+    color: rgb(244, 246, 248);
+    box-sizing:content-box;
+  }
+
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    color: rgb(223, 188, 94);
+
+}
+
+.container.title{
+    font-size: 20px;
+    text-align: center;
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.user-details {
+    padding-left: 10%;
+}
+
+.terms_condifitions {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1px;
+}
+
+button {
+    background-color:rgb(223, 188, 94);
+    border-radius:10px;
+    color: rgba(70, 33, 7, 0.7);
+    width: 100%;
+    font-size: medium
+  }
+
+.textboxid  {
+    height:200pt;
+}
+
+input:valid {
+    background-color: rgb(251, 255, 255);
+  }
+
+.fileToUpload {
+    color: rgb(221, 97, 14, 0.7);
+}
+
+  
