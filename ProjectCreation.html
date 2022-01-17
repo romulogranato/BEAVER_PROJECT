@@ -1,72 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="content-type" content="text/html;"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=l">
-    <meta name="keywords" content="beaver, project manegement, project,,,,,EDITAR,,,,"/>
-    <meta name="author"
-          content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho,
-           Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro,
-            Carolina Lebre Santos Silva">
+    <meta charset="uft-8">
+    <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords"/>
+    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
+          name="author">
 
-    <title>BEAVER</title>
+    <title>BEAVER APP</title>
 
-    <link rel="stylesheet" href="CSS/ProjectCreation.css">
+
+    <!-- CSS Stylesheets -->
+    <link href="CSS/template-internal.css" rel="stylesheet">
+
+    <!-- Responsive Scripts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fontawesome to icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"
+          type="text/css">
+
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<div class="reg">
-    <h1>Project Creation</h1>
-    <h2>
-        <br>Enter the Project Creation Details
-    </h2>
-    <div>
 
-        <li><input class="ProjectCode" type="text" placeholder="Enter a project code"></li>
-        <br>
-        <li><input class="ProjectName" type="text" placeholder="Enter a project name"></li>
-        <br>
-        <li><input class="ProjectDescription" type="text" placeholder="Enter a project description"></li>
-        <br>
-        <li><input class="ProjectStartDate" type="date" placeholder="Enter a project start date"></li>
-        <br>
-        <li><input class="NumberOfSprints" type="number" placeholder="Enter estimated number of project sprints"></li>
-        <br>
-        <li><input class="ProjectBudget" type="number" placeholder="Enter a project budget"></li>
-        <br>
-
-        <li><label for="Customer">Choose a customer:</label>
-
-            <select name="Customer" id="Customer">
-                <option value="customer_1">customer_1</option>
-                <option value="customer_2">customer_2</option>
-            </select></li>
-        <br>
-
-        <li><label for="Typology">Choose a typology:</label>
-
-            <select name="Typology" id="Typology">
-                <option value="Fixed Cost">Fixed Cost</option>
-                <option value="Time and Materials">Time and Materials</option>
-            </select></li>
-
-        <br>
-
-        <li><label for="BusinessSector">Choose a business sector:</label>
-
-            <select name="BusinessSector" id="BusinessSector">
-                <option value="Sector_1">Sector_1</option>
-                <option value="Sector_2">Sector_2</option>
-            </select></li>
-
-        <br>
-
-        <button>Continue</button>
-
-    </div>
-
+<div class="toggle-menu">
+    <i class="fas fa-bars" onclick="showMenu()"></i>
 </div>
 
+
+<div class="sidebar" id="sidebar">
+    <i class="fas fa-times" onclick="hideMenu()"></i>
+    <header>Beaver App</header>
+    <br>
+    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#dashboard"><i class="fas fa-qrcode"></i> Dashboard</a>
+    <a href="#activities"><i class="fas fa-stream"></i> Activities</a>
+    <a href="#calendar"><i class="fas fa-calendar-week"></i> Calendar</a>
+    <a href="#faqs"><i class="fas fa-question-circle"></i> FAQs</a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <a class="logout" href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+
+<script src="template-internal.js"></script>
+<div class="main">
+    <h1>Project Creation Form</h1>
+
+    <form >
+        <label for="code">Project code</label><br>
+        <input type="code" id="code" size="77" name="code"><br><br>
+
+        <label for="name">Project Name</label><br>
+        <input type="name" id="name" size="77"  name="Name"><br><br>
+
+        <label for="description">Description</label><br>
+        <input type="description" id="description" size="77"  name="description"><br><br>
+
+        <label for="customer">Choose a Customer:</label>
+        <select id="customer" name="customer">
+            <option value="customer 1">Customer 1</option>
+            <option value="customer 2">Customer 2</option>
+        </select>
+        <input type="submit"><br><br>
+
+        <label for="typology">Choose a Typology:</label>
+        <select id="typology" name="typology">
+            <option value="Fixed Cost">Fixed Cost</option>
+            <option value="Time and Materials">Time and Materials</option>
+        </select>
+        <input type="submit"><br><br>
+
+        <label for="businessSector">Choose a Business Sector:</label>
+        <select id="businessSector" name="businessSector">
+            <option value="sector 1">Sector 1</option>
+            <option value="sector 2">Sector 2</option>
+        </select>
+        <input type="submit"><br><br>
+
+        <label for="NumberOfSprints">NumberOfSprints</label><br>
+        <input type="NumberOfSprints" id="NumberOfSprints" size="77"  name="NumberOfSprints"><br><br>
+
+        <label for="budget">Budget</label><br>
+        <input type="budget" id="budget" size="77"  name="bdget"><br><br>
+        <input type="submit">
+    </form>
+
+</div>
 </body>
 </html>
