@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+/* Header */
+
+.header{
+    position: fixed;
+    min-height: 10vh;
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    padding: 1% 3%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #22577E;
+}
+
+nav img{
+    width: 60px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-links ul li a:hover{
+    color: #5584AC;
+}
+
+.button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: #95D1CC;
+    color: black;
+}
+
+.button1:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.button2 {
+    background-color: #ffffff;
+    color: black;
+}
+
+.button2:hover {
+    background-color: #5584AC;
+    color: white;
+}
+
+nav .fas{
+    display: none;
+}
+
+/* Pages Content */
+
+.do-your-page{
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 2% 5%;
+    word-spacing: 5px;
+    line-height: 30px;
+    z-index: -1;
+}
+
+.do-your-page h1{
+    font-size: 62px;
+}
+
+/* Footer */
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #22577E;
+    color: white;
+    text-align: center;
+}
+
+/* Responsividade */
+
+@media (max-width: 700px) {
+    .do-your-page h1{
+        font-size: 20px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: #5584AC;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fas{
+        display: block;
+        color: #ffffff;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+
+
+}
