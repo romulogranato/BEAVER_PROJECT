@@ -9,7 +9,7 @@
 
 
     <!-- CSS Stylesheets -->
-    <link href="Confirm_Email.css" rel="stylesheet">
+    <link href="CSS/template-internal.css" rel="stylesheet">
 
     <!-- Responsive Scripts -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,40 +24,34 @@
 </head>
 <body>
 
-    <section class="header">
-        <nav>
-            <a href="template.html"><img src="images/logo.png"></a>
-            <div class="nav-links" id="nav-links">
-                <i class="fas fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT US</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">CONTACT</a></li>
-                    <button class="button button1" type="button">REGISTER</button>
-                    <button class="button button2" type="button">LOGIN</button>
-                </ul>
-            </div>
-            <i class="fas fa-bars" onclick="showMenu()"></i>
-        </nav>
-    
-    </section>
-
-        <div class="main register_screen">
-
-         Please confirm the register on your email
-
-        </div>
-    
-
-
-<div class="footer">
-    <p class="copyright">Copyright &copy; <script>document.write(new Date().getFullYear())</script> BEAVER APP</p>
+<div class="toggle-menu">
+    <i class="fas fa-bars" onclick="showMenu()"></i>
 </div>
 
 
-<script src="template.js"></script>
+
+<div class="sidebar" id="sidebar">
+    <i class="fas fa-times" onclick="hideMenu()"></i>
+    <header>Beaver App</header>
+    <br>
+    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#dashboard"><i class="fas fa-qrcode"></i> Dashboard</a>
+    <a href="#activities"><i class="fas fa-stream"></i> Activities</a>
+    <a href="#calendar"><i class="fas fa-calendar-week"></i> Calendar</a>
+    <a href="#faqs"><i class="fas fa-question-circle"></i> FAQs</a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <a class="logout" href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+
+<div class="main">
+    <h1>Create user profile</h1>
+    <input class="name profile" type="name profile" size = 77 placeholder="Please enter your profile name using only letters">
+    <br><br>
+    <button>Create</button>
+</div>
+
+
+<script src="template-internal.js"></script>
 </body>
 </html>
 
-    
