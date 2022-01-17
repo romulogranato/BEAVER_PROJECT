@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="uft-8">
+    <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords"/>
+    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
+          name="author">
+
+    <title>BEAVER APP</title>
+
+
+    <!-- CSS Stylesheets -->
+    <link href="../CSS/template-internal.css" rel="stylesheet">
+
+    <!-- Responsive Scripts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fontawesome to icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"
+          type="text/css">
+
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="toggle-menu">
+    <i class="fas fa-bars" onclick="showMenu()"></i>
+</div>
+
+
+<div class="sidebar" id="sidebar">
+    <i class="fas fa-times" onclick="hideMenu()"></i>
+    <header>Beaver App</header>
+    <br>
+    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#dashboard"><i class="fas fa-qrcode"></i> Dashboard</a>
+    <a href="#activities"><i class="fas fa-stream"></i> Activities</a>
+    <a href="#calendar"><i class="fas fa-calendar-week"></i> Calendar</a>
+    <a href="#faqs"><i class="fas fa-question-circle"></i> FAQs</a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <a class="logout" href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+
+<div class="main">
+    <h1>Register System User</h1>
+    <h2>Welcome to Beaver!
+        <br>Let's begin the adventure
+    </h2>
+    <div>
+        <li><input class="email" type="email" placeholder="Enter email address"></li>
+        <br>
+        <li><input class="password" type="password" placeholder="Create a password"></li>
+        <br>
+        <li><input class="password" type="password" placeholder="Confirm password"></li>
+        <br>
+        <li><input class="username" type="text" placeholder="Enter a username"></li>
+        <br>
+        <li><input class="function" type="text" placeholder="Function"></li>
+        <br>
+        <li><input class="photo" type="text" placeholder="Insert photo"></li>
+        <br>
+        <button>Continue</button>
+    </div>
+</div>
+
+<script src="template-internal.js"></script>
+</body>
+</html>
