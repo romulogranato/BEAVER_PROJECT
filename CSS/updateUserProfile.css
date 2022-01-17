@@ -130,4 +130,64 @@ header{
     li{
         text-effect: none;
     }
+
+
+
+    .login_register_screen {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 15px;
+        border-radius: 15px;
+        color: whitesmoke;
+    }
+
+    .login_register_screen h2{
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .login_register_screen h2 a{
+        color: whitesmoke;
+    }
+
+    input {
+        border-radius: 2px;
+        border: none;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    button {
+        background-color:rgb(0, 104, 240);
+        border-radius:6px;
+        color: whitesmoke;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    button:hover {
+        background-color: rgb(0, 155, 207);
+    }
+
+    /*BEAVER*/
+
+    .beaver{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        margin: auto;
+        width: 220px;
+        height: 100%;
+    }
+
+    .beaverlogo {
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        margin:auto
+
+    }
+
+    .beaver h2 {
+        text-align:inherit;
+    }
+
 }
