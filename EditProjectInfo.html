@@ -1,77 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="content-type" content="text/html;"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=l">
-    <meta name="keywords" content="beaver, project manegement, project,,,,,EDITAR,,,,"/>
-    <meta name="author"
-          content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva">
-    <title>BEAVER</title>
-    <link rel="stylesheet" href="CSS/EditProjectInfo.css">
+    <meta charset="uft-8">
+    <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords" />
+    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva" name="author">
+    <title>BEAVER APP</title>
+    <!-- CSS Stylesheets -->
+    <link href="CSS/EditProjectInfo.css" rel="stylesheet">
+    <!-- Responsive Scripts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- fontawesome to icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" type="text/css">
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
-<div class="reg">
+<div class="toggle-menu">
+    <i class="fas fa-bars" onclick="showMenu()"></i>
+</div>
+<div class="sidebar" id="sidebar">
+    <i class="fas fa-times" onclick="hideMenu()"></i>
+    <header>Beaver App</header>
+    <br>
+    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="#dashboard"><i class="fas fa-qrcode"></i> Dashboard</a>
+    <a href="#activities"><i class="fas fa-stream"></i> Activities</a>
+    <a href="#calendar"><i class="fas fa-calendar-week"></i> Calendar</a>
+    <a href="#faqs"><i class="fas fa-question-circle"></i> FAQs</a>
+    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+    <a class="logout" href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+
+<div class="main">
     <h2>Edit Project Information</h2>
-    <style type="text/css">
-        h2 {
-            color: rgba(0, 0, 0, 0.65);
-        }
-    </style>
-    <div>
-
-        <li><input class="data" type="data" placeholder="Project Name"></li>
-        <br>
-        <li><input class="data" type="data" placeholder="Start Date"></li>
-        <br>
-        <li><input class="data" type="data" placeholder="End Date"></li>
-        <br>
-        <li><input class="data" type="data" placeholder="Number of Sprints"></li>
-        <br>
-        <li><input class="data" type="data" placeholder="Sprint Duration"></li>
-        <br>
-        <div class="dropdown">
-            <button class="dropbtn">Project Status</button>
-            <div class="dropdown-content">
-                <a href="#">Planned</a>
-                <a href="#">Inception</a>
-                <a href="#">Elaboration</a>
-                <a href="#">Construction</a>
-                <a href="#">Transition</a>
-                <a href="#">Warranty</a>
-                <a href="#">Closed</a>
-            </div>
-        </div>
-        <br>
-        <li><input class="data" type="data" placeholder="Project Team"></li>
-        <p>
-
-        </p>
-        <a href="ProjectList.html">
+    <br>
+    <label> Project Name </label>
+    <br>
+    <input class="data" type="data" size = 77 placeholder="Project Name">
+    <br>
+    <br>
+    <label> Start Date </label>
+    <br>
+    <input class="data" type="data" size = 77 placeholder="Start Date">
+    <br>
+    <br>
+    <label> End Date </label>
+    <br>
+    <input class="data" type="data" size = 77 placeholder="End Date">
+    <br>
+    <br>
+    <label> Number of Sprints </label>
+    <br>
+    <input class="data" type="data" size = 77 placeholder="Number of Sprints">
+    <br>
+    <br>
+    <label> Sprint Duration </label>
+    <br>
+    <input class="data" type="data" size = 77 placeholder="Sprint Duration">
+    <br>
+    <br>
+    <label> Project Status </label>
+    <br>
+    <select id="profile" name="profile">
+        <option value="administrator">Planned</option>
+        <option value="director">Inception</option>
+        <option value="projectmanager">Elaboration</option>
+        <option value="administrator">Construction</option>
+        <option value="director">Transition</option>
+        <option value="projectmanager">Warranty</option>
+        <option value="administrator">Closed</option>
+    </select>
+    <br>
+    <br>
+    <label> Project Team </label>
+    <br>
+    <input class="data" type="data" size = 77 placeholder="Project Team">
+    <br>
+    <br>
+         <a href="ProjectList.html">
             <button><b>Update</b></button>
-        </a>
-        <style type="text/css">
-            button {
-                color: rgba(0, 0, 0, 0.65);
-            }
-
-        </style>
-        <p>
-
-        </p>
-
-        <a href="ProjectList.html">
+         </a>
+    <br>
+    <br>
+         <a href="ProjectList.html">
             <button><b>Return</b></button>
-        </a>
-        <style type="text/css">
-            button {
-                color: rgba(0, 0, 0, 0.65);
-            }
-
-        </style>
-    </div>
-
+         </a>
 </div>
 </body>
 </html>
+
+
+<!--<div class="reg">-->
+<!--    <h2>Edit Project Information</h2>-->
+
+<!--    <br>-->
+<!--    <label><input class="data" type="data" placeholder="Project Name"></label>-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <label><input class="data" type="data" placeholder="Start Date"></label>-->
+<!--    <br>-->
+<!--    <label><input class="data" type="data" placeholder="End Date"></label>-->
+<!--    <br>-->
+<!--    <label><input class="data" type="data" placeholder="Number of Sprints"></label>-->
+<!--    <br>-->
+<!--    <label><input class="data" type="data" placeholder="Sprint Duration"></label>-->
+<!--    <br>-->
+<!--    <div class="dropdown">-->
+<!--        <button class="dropbtn">Project Status</button>-->
+<!--        <div class="dropdown-content">-->
+<!--            <a href="#">Planned</a>-->
+<!--            <a href="#">Inception</a>-->
+<!--            <a href="#">Elaboration</a>-->
+<!--            <a href="#">Construction</a>-->
+<!--            <a href="#">Transition</a>-->
+<!--            <a href="#">Warranty</a>-->
+<!--            <a href="#">Closed</a>-->
+<!--        </div>-->
+<!--     </div>-->
+<!--     <br>-->
+<!--     <label><input class="data" type="data" placeholder="Project Team"></label>-->
+
+<!--     <a href="ProjectList.html">-->
+<!--        <button><b>Update</b></button>-->
+<!--     </a>-->
+
+<!--     <a href="ProjectList.html">-->
+<!--        <button><b>Return</b></button>-->
+<!--     </a>-->
+
+<!--    <script src="template-internal.js"></script>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
