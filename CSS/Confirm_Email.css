@@ -169,3 +169,22 @@ body {
     box-sizing:content-box;
     text-size-adjust: 50px;
   }
+
+h3 {
+    font-size: 25px;
+}
+
+.login_area {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 45px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #22577E;
+    color: white;
+}

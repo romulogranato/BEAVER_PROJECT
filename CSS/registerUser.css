@@ -128,20 +128,21 @@ nav .fas {
 }
 
 .login_screen {
-    position: relative;
+    position: fixed;
     background-color: rgba(34, 87, 126, 0.5);
-    padding: 145px 70px;
+    padding: 100px 5px;
     border-radius: 15px;
     color: whitesmoke;
     margin: 0;
 }
 
 .login_screen h1 {
-    font-size: 65px;
+    margin-top: 0;
+    font-size: 45px;
 }
 
 .login_screen h2 {
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -154,8 +155,8 @@ nav .fas {
     border: none;
     border-radius: 10px;
     text-decoration: none;
-    font-size: 30px;
-    padding: 6px 150px;
+    font-size: 20px;
+    padding: 6px 150px 0px;
     margin: 0;
     transition-duration: 0.4s;
     cursor: pointer;
@@ -164,12 +165,19 @@ nav .fas {
 }
 
 .login_screen input {
-    margin-top: 10px;
+    margin: 5px 0px 5px;
     border-radius: 10px;
     text-decoration: none;
-    font-size: 25px;
-    padding: 6px 50px;
+    font-size: 15px;
+    padding: 7px 65px;
+}
 
+.fileToUpload {
+    margin-top: 2px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 5px;
+    padding: 7px 10px;
 }
 
 /* Footer */

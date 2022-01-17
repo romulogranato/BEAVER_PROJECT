@@ -52,14 +52,11 @@ header{
 /* Style the main content */
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
-    padding: 0px 10px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-    align-content: center;
+    flex-direction: column;
 }
+
+
 
 /* Responsividade */
 
