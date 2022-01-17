@@ -6,210 +6,136 @@
 body {
     font-family: 'Roboto', sans-serif;
     color: black;
-}
-
-body {
     background-color: #F6F2D4;
 }
 
-/* Header */
-
-.header {
-    position: fixed;
-    min-height: 10vh;
-    width: 100%;
-}
-
-nav {
-    display: flex;
-    padding: 1% 3%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #22577E;
-}
-
-nav img {
-    width: 60px;
-}
-
-.nav-links {
-    flex: 1;
-    text-align: right;
-}
-
-.nav-links ul li {
-    list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
-}
-
-.nav-links ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 20px;
-}
-
-.nav-links ul li a:hover {
-    color: #5584AC;
-}
-
-.button {
+input {
+    border-radius: 2px;
     border: none;
-    border-radius: 10px;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    width: 100%;
     font-size: 20px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
 }
 
-.button1 {
-    background-color: #95D1CC;
-    color: black;
-}
-
-.button1:hover {
-    background-color: #4CAF50;
-    color: white;
-}
-
-.button2 {
-    background-color: #ffffff;
-    color: black;
-}
-
-.button2:hover {
-    background-color: #5584AC;
-    color: white;
-}
-
-nav .fas {
-    display: none;
-}
-
-/* Pages Content */
-
-.do-your-page {
-
-    width: 80%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    padding: 2% 5%;
-    word-spacing: 5px;
-    line-height: 30px;
-    z-index: -1;
-}
-
-.do-your-page h1 {
-    font-size: 62px;
-}
-
-.do-your-page {
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    column-gap: 10%;
-    align-content: center;
-    padding-left: 50%;
-    padding-right: 50%;
-    transform: translate(-50%, -50%);
-    flex-wrap: wrap;
-}
-
-/* BEAVER */
-
-.beaver_space {
-    width: border-box;
-}
-
-/* LOGIN FORM */
-.login_form {
-}
-
-.login_screen {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 145px;
-    border-radius: 15px;
-    color: whitesmoke;
-
-}
-
-.login_screen h2{
+.reg {
     font-size: 20px;
     text-align: center;
-}
-
-.login_screen h2 a{
-    color: whitesmoke;
+    padding-left: 25%;
+    padding-right: 25%;
 }
 
 button {
-    border: none;
-    border-radius: 10px;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+    background-color: rgb(0, 104, 240);
+    border-radius: 6px;
+    color: whitesmoke;
+    width: 100%;
     font-size: 20px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    cursor: pointer;
-    background-color: #22577E;
-    color: white;
 }
 
-/* Footer */
+li {
+    list-style: none;
+}
 
-.footer {
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style the sidebar - fixed full height */
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #22577E;
+    overflow-x: hidden;
+}
+
+header{
+    padding: 30px 8px 30px 16px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #5584AC;
+}
+
+/* Style sidebar links */
+.sidebar a {
+    padding: 6px 8px 20px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    transition: .4s;
+}
+
+.logout{
     position: fixed;
     left: 0;
     bottom: 0;
-    width: 100%;
-    background-color: #22577E;
-    color: white;
-    text-align: center;
 }
 
-/* Resposividade */
+/* Style links on mouse-over */
+.sidebar a:hover {
+    color: #5584AC;
+    padding-left: 30px;
+}
 
+/* Style the main content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+/* Responsividade */
+
+.toggle-menu{
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    display: none;
+}
+
+.sidebar .fa-times{
+    position: absolute;
+    top: 10px;
+    right: 55px;
+    margin-left: 50px;
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+}
+
+.sidebar .fa-times:hover{
+    color: #5584AC;
+}
+
+
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
 @media (max-width: 700px) {
-    .do-your-page h1 {
-        font-size: 20px;
-    }
-
-    .nav-links ul li {
-        display: block;
-    }
-
-    .nav-links {
+    header{font-size: 15px;}
+    .sidebar a {font-size: 15px;}
+    .sidebar{
+        width: 130px;
         position: absolute;
-        background: #5584AC;
-        height: 100vh;
-        width: 200px;
         top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
+        left: -200px;
         transition: 1s;
+        z-index: 3;
     }
-
-    nav .fas {
+    .sidebar .fa-times{
         display: block;
-        color: #ffffff;
+    }
+    .sidebar header{
+        padding-top: 50px;
+    }
+    .toggle-menu{
+        display: block;
+        color: black;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
-    }
-
-    .nav-links ul {
-        padding: 30px;
+        z-index: 2;
     }
 }
