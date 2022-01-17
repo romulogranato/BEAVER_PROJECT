@@ -22,25 +22,48 @@
         <br>Enter the Project Creation Details
     </h2>
     <div>
-        <input class="ProjectCode" type="text" placeholder="Enter a project code">
-        <br><br>
+
+        <li><input class="ProjectCode" type="text" placeholder="Enter a project code"></li>
+        <br>
         <li><input class="ProjectName" type="text" placeholder="Enter a project name"></li>
         <br>
         <li><input class="ProjectDescription" type="text" placeholder="Enter a project description"></li>
         <br>
         <li><input class="ProjectStartDate" type="date" placeholder="Enter a project start date"></li>
         <br>
-        <li><input class="Typology" type="search" placeholder="Choose a typology"></li>
+        <li><input class="NumberOfSprints" type="number" placeholder="Enter estimated number of project sprints"></li>
         <br>
-        <li><input class="Customer" type="search" placeholder="Choose a customer"></li>
+        <li><input class="ProjectBudget" type="number" placeholder="Enter a project budget"></li>
         <br>
-        <li><input class="BusinessSector" type="search" placeholder="Choose a business sector"></li>
+
+        <li><label for="Customer">Choose a customer:</label>
+
+            <select name="Customer" id="Customer">
+                <option value="customer_1">customer_1</option>
+                <option value="customer_2">customer_2</option>
+            </select></li>
         <br>
-        <input class="NumberOfSprints" type="number" placeholder="Enter estimated number of project sprints">
-        <br><br>
-        <input class="ProjectBudget" type="number" placeholder="Enter a project budget">
-        <br><br>
+
+        <li><label for="Typology">Choose a typology:</label>
+
+            <select name="Typology" id="Typology">
+                <option value="Fixed Cost">Fixed Cost</option>
+                <option value="Time and Materials">Time and Materials</option>
+            </select></li>
+
+        <br>
+
+        <li><label for="BusinessSector">Choose a business sector:</label>
+
+            <select name="BusinessSector" id="BusinessSector">
+                <option value="Sector_1">Sector_1</option>
+                <option value="Sector_2">Sector_2</option>
+            </select></li>
+
+        <br>
+
         <button>Continue</button>
+
     </div>
 
 </div>
