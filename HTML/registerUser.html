@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="uft-8">
     <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords"/>
     <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
           name="author">
 
-    <title>BEAVER APP</title>
+    <title>BEAVER</title>
 
 
     <!-- CSS Stylesheets -->
-    <link href="../CSS/template-internal.css" rel="stylesheet">
+    <link href="../CSS/registerUser.css" rel="stylesheet">
 
     <!-- Responsive Scripts -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,49 +23,83 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
-<div class="toggle-menu">
-    <i class="fas fa-bars" onclick="showMenu()"></i>
-</div>
+<!-- Nav Bar -->
 
+<section class="header">
+    <nav>
+        <a href="template.html"><img src="../images/img.beaver.png"></a>
+        <div class="nav-links" id="nav-links">
+            <i class="fas fa-times" onclick="hideMenu()"></i>
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT US</a></li>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+        <i class="fas fa-bars" onclick="showMenu()"></i>
+    </nav>
 
-<div class="sidebar" id="sidebar">
-    <i class="fas fa-times" onclick="hideMenu()"></i>
-    <header>Beaver App</header>
-    <br>
-    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="#dashboard"><i class="fas fa-qrcode"></i> Dashboard</a>
-    <a href="#activities"><i class="fas fa-stream"></i> Activities</a>
-    <a href="#calendar"><i class="fas fa-calendar-week"></i> Calendar</a>
-    <a href="#faqs"><i class="fas fa-question-circle"></i> FAQs</a>
-    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-    <a class="logout" href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
-</div>
+</section>
 
-<div class="main">
-    <h1>Register System User</h1>
-    <h2>Welcome to Beaver!
-        <br>Let's begin the adventure
-    </h2>
-    <div>
-        <li><input class="email" type="email" placeholder="Enter email address"></li>
-        <br>
-        <li><input class="password" type="password" placeholder="Create a password"></li>
-        <br>
-        <li><input class="password" type="password" placeholder="Confirm password"></li>
-        <br>
-        <li><input class="username" type="text" placeholder="Enter a username"></li>
-        <br>
-        <li><input class="function" type="text" placeholder="Function"></li>
-        <br>
-        <li><input class="photo" type="text" placeholder="Insert photo"></li>
-        <br>
-        <button>Continue</button>
+<div class="do-your-page">
+    <div class="beaver_space">
+        <ul class="beaver">
+            <a><img src="../images/logo.png" class="beaverlogo"></a>
+            <h2>Beaver helps you to manage your projects with the nicest people</h2>
+        </ul>
+    </div>
+    <div class="login_form">
+        <ul id="Login" class="login_screen">
+            <h1>Register System User</h1>
+            <br>
+            <h2>Welcome to Beaver!
+                <br>Let's begin the adventure
+            </h2>
+            <div>
+                <input class="email" type="email" placeholder="*Enter email address">
+                <br>
+                <input class="password" type="password" placeholder="*Create a password">
+                <br>
+                <input class="password" type="password" placeholder="*Confirm password">
+                <br>
+                <input class="username" type="text" placeholder="*Enter a username">
+                <br>
+                <input class="function" type="text" placeholder="Function">
+                <br><br>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    <input lang="en" class="fileToUpload" type="file" value="Choose Image"
+                           name="fileToUpload">
+                    <input type="submit" value="Upload Photo (optional)" name="submit">
+                </form>
+                <br>
+                <label check> Beaver team has the commitment to protect your data and use them only
+                    for internal data analysis.
+                    <br>Please tick the box to proceed: <input type="checkbox" name="check">
+                </label><br>
+                <a href=CONFIRM_EMAIL.html>
+                    <button>Confirm</button>
+                </a>
+            </div>
+        </ul>
     </div>
 </div>
 
-<script src="template-internal.js"></script>
+<div class="footer">
+    <p class="copyright">Copyright &copy;
+        <script>document.write(new Date().getFullYear())</script>
+        BEAVER APP
+    </p>
+</div>
+
+
+<script src="../JS/template.js"></script>
+
 </body>
+
 </html>
