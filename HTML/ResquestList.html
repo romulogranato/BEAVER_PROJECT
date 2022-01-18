@@ -3,14 +3,14 @@
 <head>
     <meta charset="uft-8">
     <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords"/>
-    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
+    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
           name="author">
 
     <title>BEAVER APP</title>
 
 
     <!-- CSS Stylesheets -->
-    <link href="../CSS/ChangePassword.css" rel="stylesheet">
+    <link href="../CSS/ProfileList.css" rel="stylesheet">
 
     <!-- Responsive Scripts -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,11 +24,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
 <div class="toggle-menu">
     <i class="fas fa-bars" onclick="showMenu()"></i>
 </div>
+
 
 <div class="sidebar" id="sidebar">
     <i class="fas fa-times" onclick="hideMenu()"></i>
@@ -38,34 +39,44 @@
     <a href="UserList.html"><i class="fas fa-search"></i> Search</a>
     <a href="ResquestList.html"><i class="fas fa-reply"></i> Requests</a>
     <a href="ProfileList.html"><i class="fas fa-id-card"></i> Profiles</a>
-    <a href="UpdatePersonalData.html"><i class="fas fa-user"></i> Account</a>
+    <a href="updatePersonalDataAdmin.html"><i class="fas fa-user"></i> Account</a>
     <a class="logout" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
 </div>
 
 <div class="main">
-    <h2>Change Password</h2>
-    <br>
-    <br>
-    <label> Old Password </label>
-    <br>
-    <br>
-    <input class="password" type="password" placeholder="Insert Old Password">
-    <br>
-    <br>
-    <label> New Password </label>
-    <br>
-    <br>
-    <input class="password" type="password" placeholder="Insert New Password">
-    <br>
-    <br>
-    <label> New Password </label>
-    <br>
-    <br>
-    <input class="password" type="password" placeholder="Confirm New Password">
-    <br>
-    <br>
-    <a href="initial_page_admin.html"><button class="button-update"><b>Change</b></button></a>
+    <h1>Request List</h1>
 
-    <script src="../JS/template-internal.js"></script>
+    <div class="tabl">
+        <div style="width: 20%">
+            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for Request..">
+        </div>
+        <br>
+        <table id="ProjTable">
+            <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Profile Requested</th>
+            </tr>
+            <tr>
+                <td data-column="ID"><a href="updateUserProfile.html">01</a></td>
+                <td data-column="Username">Maria Vasconcelos</td>
+                <td data-column="Profile Requested">Administrator</td>
+            </tr>
+            <tr>
+                <td data-column="ID"><a href="updateUserProfile.html">02</a></td>
+                <td data-column="Username">Jose Maria Vasconcelos</td>
+                <td data-column="Profile Requested">Director</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+    </div>
+    <br>
+    <br>
 </div>
+
+
+
+<script src="../JS/template-internal.js"></script>
 </body>
+</html>

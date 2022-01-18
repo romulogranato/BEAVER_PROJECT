@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="uft-8">
+    <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords"/>
+    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
+          name="author">
+
+    <title>BEAVER APP</title>
+
+
+    <!-- CSS Stylesheets -->
+    <link href="../CSS/settings.css" rel="stylesheet">
+
+    <!-- Responsive Scripts -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fontawesome to icons-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"
+          type="text/css">
+
+    <!-- Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="toggle-menu">
+    <i class="fas fa-bars" onclick="showMenu()"></i>
+</div>
+
+
+<div class="sidebar" id="sidebar">
+    <i class="fas fa-times" onclick="hideMenu()"></i>
+    <header>Beaver App</header>
+    <br>
+    <a href="initial_page_director.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="ProjectList.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="settings.html"><i class="fas fa-cog"></i> Settings</a>
+    <a href="UpdatePersonalDataDirector.html"><i class="fas fa-user"></i> Account</a>
+    <a class="logout" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
+</div>
+
+<div class="main">
+    <h1>Customer List</h1>
+
+    <div class="tabl">
+        <div style="width: 20%">
+            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for Customer Name..">
+        </div>
+        <br>
+        <br>
+        <table id="ProjTable">
+            <tr>
+                <th>ID</th>
+                <th>Customer Name</th>
+                <th>Contact</th>
+                <th>Address</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td data-column="ID"><a href="#">001</a></td>
+                <td data-column="Customer Name">ISEP</td>
+                <td data-column="Contact">228 340 500</td>
+                <td data-column="Address">Porto</td>
+                <td data-column="Email">info@isep.ipp.pt</td>
+            </tr>
+            <tr>
+                <td data-column="ID"><a href="#">002</a></td>
+                <td data-column="Customer Name">Clown Town</td>
+                <td data-column="Contact">255 701 201</td>
+                <td data-column="Address">Braga</td>
+                <td data-column="Email">geral@clowntown.pt</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <a href="#"><button class="button-update"><b>Create Customer</b></button></a>
+    <br>
+    <br>
+    <hr>
+    <h1>Typology List</h1>
+    <div class="tabl">
+        <div style="width: 20%">
+            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for Typology..">
+        </div>
+        <br>
+        <br>
+        <table id="ProjTable2">
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td data-column="ID">01</td>
+                <td data-column="description">Fixed Cost</td>
+            </tr>
+            <tr>
+                <td data-column="ID">02</td>
+                <td data-column="description">Time and Materials</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <a href="CreateProjectTipology.html"><button class="button-update"><b>Create Typology</b></button></a>
+    <br>
+    <br>
+    <hr>
+    <h1>Status List</h1>
+    <div class="tabl">
+        <div style="width: 20%">
+            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for Status..">
+        </div>
+        <br>
+        <br>
+        <table id="ProjTable2">
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td data-column="ID">01</td>
+                <td data-column="description">Planned</td>
+            </tr>
+            <tr>
+                <td data-column="ID">02</td>
+                <td data-column="description">Inception</td>
+            </tr>
+            <tr>
+                <td data-column="ID">03</td>
+                <td data-column="description">Elaboration</td>
+            </tr>
+            <tr>
+                <td data-column="ID">04</td>
+                <td data-column="description">Construction</td>
+            </tr>
+            <tr>
+                <td data-column="ID">05</td>
+                <td data-column="description">Transition</td>
+            </tr>
+            <tr>
+                <td data-column="ID">06</td>
+                <td data-column="description">Warranty</td>
+            </tr>
+            <tr>
+                <td data-column="ID">07</td>
+                <td data-column="description">Closed</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <a href="#"><button class="button-update"><b>Create Status</b></button></a>
+    <br>
+    <br>
+    <hr>
+    <h1>Business Sector List</h1>
+    <div class="tabl">
+        <div style="width: 20%">
+            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for Business Sector..">
+        </div>
+        <br>
+        <br>
+        <table id="ProjTable2">
+            <tr>
+                <th>ID</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td data-column="ID">01</td>
+                <td data-column="description">IT</td>
+            </tr>
+            <tr>
+                <td data-column="ID">02</td>
+                <td data-column="description">Health Care</td>
+            </tr>
+            <tr>
+                <td data-column="ID">03</td>
+                <td data-column="description">Entertainment</td>
+            </tr>
+            <tr>
+                <td data-column="ID">04</td>
+                <td data-column="description">Industry</td>
+            </tr>
+        </table>
+    </div>
+    <br>
+    <a href="#"><button class="button-update"><b>Create Business Sector</b></button></a>
+</div>
+
+
+
+<script src="../JS/template-internal.js"></script>
+</body>
+</html>

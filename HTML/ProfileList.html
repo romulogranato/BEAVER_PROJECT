@@ -10,7 +10,7 @@
 
 
     <!-- CSS Stylesheets -->
-    <link href="../CSS/ProjectList.css" rel="stylesheet">
+    <link href="../CSS/ProfileList.css" rel="stylesheet">
 
     <!-- Responsive Scripts -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,37 +44,38 @@
 </div>
 
 <div class="main">
-    <h1>Users List</h1>
+    <h1>Profiles List</h1>
 
     <div class="tabl">
         <div style="width: 20%">
-            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for User Name..">
+            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for Profile..">
         </div>
-        <br>
         <br>
         <table id="ProjTable">
             <tr>
+                <th>ID</th>
                 <th>Name</th>
-                <th>Email</th>
-                <th>Function</th>
-                <th>Profile</th>
-                <th>State</th>
             </tr>
             <tr>
-                <td data-column="Name"><a href="#">Maria Vasconcelos</a></td>
-                <td data-column="Email"><a href="#"> maria.vasconcelos@beaver.pt</a></td>
-                <td data-column="Function">Database Administrator</td>
-                <td data-column="Profile">User</td>
-                <td data-column="State">Active</td>
+                <td data-column="ID">01</td>
+                <td data-column="Name">Administrator</td>
             </tr>
             <tr>
-                <td data-column="Name"><a href="#">Jose Maria Vasconcelos</a></td>
-                <td data-column="Email"><a href="#"> jose.maria.vasconcelos@beaver.pt</a></td>
-                <td data-column="Function">Cybersecurity Specialist</td>
-                <td data-column="Profile">User</td>
-                <td data-column="State">Active</td>
+                <td data-column="ID">02</td>
+                <td data-column="Name">Director</td>
+            </tr>
+            <tr>
+                <td data-column="ID">03</td>
+                <td data-column="Name">User</td>
+            </tr>
+            <tr>
+                <td data-column="ID">04</td>
+                <td data-column="Name">Visitor</td>
             </tr>
         </table>
+        <br>
+        <br>
+        <a href="CreateUserProfile.html"><button class="button-update"><b>Create Profile</b></button></a>
     </div>
     <br>
     <br>
