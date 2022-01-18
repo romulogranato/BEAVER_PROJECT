@@ -1,8 +1,12 @@
-* {
+*{
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
     background-color: #F6F2D4;
 }
 
@@ -18,7 +22,7 @@ body {
     overflow-x: hidden;
 }
 
-header {
+header{
     padding: 30px 8px 30px 16px;
     font-size: 20px;
     color: #ffffff;
@@ -35,7 +39,7 @@ header {
     transition: .4s;
 }
 
-.logout {
+.logout{
     position: fixed;
     left: 0;
     bottom: 0;
@@ -50,7 +54,8 @@ header {
 /* Style the main content */
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
-    padding: 3% 5%;}
+    padding: 3% 5%;
+}
 
 .button-update{
     padding: 1% 3%;
@@ -74,64 +79,35 @@ header {
     cursor: pointer;
 }
 
-/* Responsividade */
+/* Resposividade */
 
-.toggle-menu {
-    position: absolute;
-    color: #ffffff;
-    font-size: 20px;
-    display: none;
-}
-
-.sidebar .fa-times {
-    position: absolute;
-    top: 10px;
-    right: 55px;
-    margin-left: 50px;
-    font-size: 40px;
-    color: #ffffff;
-    cursor: pointer;
-    display: none;
-}
-
-.sidebar .fa-times:hover {
-    color: #5584AC;
-}
-
-
-/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
 @media (max-width: 700px) {
-    header {
-        font-size: 15px;
+    .do-your-page h1{
+        font-size: 20px;
     }
-
-    .sidebar a {
-        font-size: 15px;
+    .nav-links ul li{
+        display: block;
     }
-
-    .sidebar {
-        width: 130px;
+    .nav-links{
         position: absolute;
+        background: #5584AC;
+        height: 100vh;
+        width: 200px;
         top: 0;
-        left: -200px;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
         transition: 1s;
-        z-index: 3;
     }
-
-    .sidebar .fa-times {
+    nav .fas{
         display: block;
-    }
-
-    .sidebar header {
-        padding-top: 50px;
-    }
-
-    .toggle-menu {
-        display: block;
-        color: black;
+        color: #ffffff;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
-        z-index: 2;
     }
+    .nav-links ul{
+        padding: 30px;
+    }
+
 }

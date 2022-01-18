@@ -54,6 +54,7 @@ header{
 /* Style the main content */
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 3% 5%;
 }
 
 .update_form {
