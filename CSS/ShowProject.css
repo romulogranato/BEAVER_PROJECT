@@ -1,0 +1,114 @@
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    background-color: #F6F2D4;
+}
+/* Style the sidebar - fixed full height */
+.sidebar {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #22577E;
+    overflow-x: hidden;
+}
+
+header{
+    padding: 30px 8px 30px 16px;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #5584AC;
+}
+
+/* Style sidebar links */
+.sidebar a {
+    padding: 6px 8px 20px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+    transition: .4s;
+}
+
+.logout{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+    color: #5584AC;
+    padding-left: 30px;
+}
+
+/* Style the main content */
+.main {
+    margin-left: 160px; /* Same as the width of the sidenav */
+    padding: 0px 10px;
+}
+
+/* Responsividade */
+
+.toggle-menu{
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    display: none;
+}
+
+.sidebar .fa-times{
+    position: absolute;
+    top: 10px;
+    right: 55px;
+    margin-left: 50px;
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+}
+
+.sidebar .fa-times:hover{
+    color: #5584AC;
+}
+
+
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media (max-width: 700px) {
+    header{font-size: 15px;}
+    .sidebar a {font-size: 15px;}
+    .sidebar{
+        width: 130px;
+        position: absolute;
+        top: 0;
+        left: -200px;
+        transition: 1s;
+        z-index: 3;
+    }
+    .sidebar .fa-times{
+        display: block;
+    }
+    .sidebar header{
+        padding-top: 50px;
+    }
+    .toggle-menu{
+        display: block;
+        color: black;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    .Tabela th, td {
+        border: 1px solid black;
+    }
+}
