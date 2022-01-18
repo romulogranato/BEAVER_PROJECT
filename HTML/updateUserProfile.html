@@ -24,11 +24,9 @@
     </head>
 
     <body>
-
         <div class="toggle-menu">
             <i class="fas fa-bars" onclick="showMenu()"></i>
         </div>
-
 
         <div class="sidebar" id="sidebar">
             <i class="fas fa-times" onclick="hideMenu()"></i>
@@ -44,32 +42,31 @@
         </div>
 
         <div class="main">
-            <h2>Update Personal Information</h2>
-            <br>
-            <label> UserName </label>
-            <br>
-            <br>
-            <input class="data" type="data" size = 77 placeholder="UserName" value ="Maria Antonia Ferreira Vasconcelos">
-            <br>
-            <br>
-            <label> Function </label>
-            <br>
-            <br>
-            <input class="data" type="data" size = 77 placeholder="Function" value ="DataBase Administrator">
-            <br>
-            <br>
-            <label> Insert Your Photo </label>
-            <br>
-            <br>
-            <div class="fileUpload btn btn-primary">
-                <span>Upload</span>
-                <input type="file" class="upload" />
+            <div class="update_form">
+                <h2>Personal Information</h2>
+                <label> Name </label>
+                <input class="data" type="data" size = 77 placeholder="UserName" value ="Maria Antonia Ferreira Vasconcelos">
+                <label> E-mail </label>
+                <input class="data" type="email" size = 77 placeholder="UserName" value ="maria.antonia.asconcelos@isep.ipp.pt">
+                <label> Function </label>
+                <input class="data" type="data" size = 77 placeholder="Function" value ="DataBase Administrator">
+                <label> User Profile</label>
+                <label for="AssignedProfile" class="profile">Actual Profile</label>
+                    <select class="update_UserProfile" name="Assigned Profile" id="AssignedProfile">
+                        <option value="Visitor">Visitor</option>
+                        <option value="Administrator">Administrator</option>
+                        <option value="Director">Director</option>
+                    </select>
+                <label for="NewAssignProfile" class="profile">New Profile</label>
+                    <select class="update_UserProfile" name="New Assign Profile" id="NewAssignProfile">
+                        <option value="Visitor">Visitor</option>
+                        <option value="Administrator">Administrator</option>
+                        <option value="Director">Director</option>
+                    </select>
+                <br>
+                <a href="../HTML/template-internal.html"><button><b>Update</b></button></a>
             </div>
-            <br>
-            <br>
-            <button><b>Update</b></button>
         </div>
-
 
         <script src="../JS/template-internal.js"></script>
     </body>

@@ -52,11 +52,37 @@ header{
 /* Style the main content */
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
-    display: flex;
-    flex-direction: column;
 }
 
+.update_form {
+    display: inline-grid;
+    grid-row: auto;
+    row-gap: 1px;
+    padding: 10px 15px;
+    font-size: 25px;
+}
 
+input{
+    font-size: 15px;
+    padding: 5px;
+}
+
+.update_UserProfile {
+    padding: 15px;
+}
+
+.update_UserProfile {
+    padding: 5px 10px;
+    font-size: 15px;
+}
+
+.profile {
+    font-size: 15px;
+}
+
+.update_form button {
+    padding: 5px;
+}
 
 /* Responsividade */
 
