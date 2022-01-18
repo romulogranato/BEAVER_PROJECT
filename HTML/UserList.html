@@ -35,53 +35,49 @@
     <i class="fas fa-times" onclick="hideMenu()"></i>
     <header>Beaver App</header>
     <br>
-    <a href="initial_page_director.html"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="ProjectList.html"><i class="fas fa-folder"></i> Projects</a>
-    <a href="#activities"><i class="fas fa-cog"></i> Settings</a>
-    <a href="UpdatePersonalDataDirector.html"><i class="fas fa-user"></i> Account</a>
+    <a href="initial_page_admin.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="UserList.html"><i class="fas fa-search"></i> Search</a>
+    <a href="#activities"><i class="fas fa-reply"></i> Requests</a>
+    <a href="#calendar"><i class="fas fa-id-card"></i> Profiles</a>
+    <a href="UpdatePersonalData.html"><i class="fas fa-user"></i> Account</a>
     <a class="logout" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
 </div>
 
 <div class="main">
-    <h1>Projects List</h1>
+    <h1>Users List</h1>
 
     <div class="tabl">
         <div style="width: 20%">
-            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for Project Name..">
+            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for User Name..">
         </div>
         <br>
         <br>
         <table id="ProjTable">
             <tr>
-                <th>Code</th>
-                <th>Project Name</th>
-                <th>Description</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Status</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Function</th>
+                <th>Profile</th>
+                <th>State</th>
             </tr>
             <tr>
-                <td data-column="Code"><a href="EditProjectInfo.html">PM001</a></td>
-                <td data-column="Project Name"><a href="EditProjectInfo.html"> PMprototype</a></td>
-                <td data-column="Description">This is a project management system
-                    prototype.</td>
-                <td data-column="Start Date">03/01/2022</td>
-                <td data-column="End Date">30/06/2022</td>
-                <td data-column="Status">Planned</td>
+                <td data-column="Name"><a href="updateUserProfile.html">Maria Vasconcelos</a></td>
+                <td data-column="Email"><a href="updateUserProfile.html"> maria.vasconcelos@beaver.pt</a></td>
+                <td data-column="Function">Database Administrator</td>
+                <td data-column="Profile">User</td>
+                <td data-column="State">Active</td>
             </tr>
             <tr>
-                <td data-column="Code"><a href="EditProjectInfo.html">PM002</a></td>
-                <td data-column="Project Name"><a href="EditProjectInfo.html">PMprototype2</a></td>
-                <td data-column="Description">This is the second PMS prototype.</td>
-                <td data-column="Start Date">30/06/2022</td>
-                <td data-column="End Date">20/12/2022</td>
-                <td data-column="Status">Planned</td>
+                <td data-column="Name"><a href="EditProjectInfo.html">Jose Maria Vasconcelos</a></td>
+                <td data-column="Email"><a href="EditProjectInfo.html"> jose.maria.vasconcelos@beaver.pt</a></td>
+                <td data-column="Function">Cybersecurity Specialist</td>
+                <td data-column="Profile">User</td>
+                <td data-column="State">Active</td>
             </tr>
         </table>
     </div>
     <br>
     <br>
-    <a href="ProjectCreation.html"><button class="button-update"><b>Create Project</b></button></a>
 </div>
 
 

@@ -56,22 +56,29 @@
     </div>
     <div class="login_form">
         <ul id="Login" class="login_screen">
-            <h1>Register System User</h1>
+            <h1>Register</h1>
             <br>
-            <h2>Welcome to Beaver!
-                <br>Let's begin the adventure
-            </h2>
             <div>
-                <input class="email" type="email" placeholder="*Enter email address" required>
-                <br>
-                <input class="password" type="password" placeholder="*Create a password" required>
-                <br>
-                <input class="password" type="password" placeholder="*Confirm password" required>
-                <br>
-                <input class="username" type="text" placeholder="*Enter a username" required>
-                <br>
-                <input class="function" type="text" placeholder="*Function" required>
-                <br><br>
+                <table>
+                    <td>
+                        <ul style="width: 150px">
+                            <label>Email</label><br><br>
+                            <label>Password</label><br><br>
+                            <label>Confirm Password</label><br><br>
+                            <label>Full Name</label><br><br>
+                            <label>Function</label><br><br>
+                        </ul>
+                    </td>
+                    <td>
+                        <ul style="padding-bottom: 10px">
+                            <input class="email" type="email" placeholder="*Enter email address" required>
+                            <input class="password" type="password" placeholder="*Create a password" required>
+                            <input class="password" type="password" placeholder="*Confirm password" required>
+                            <input class="username" type="text" placeholder="*Enter a username" required>
+                            <input class="function" type="text" placeholder="*Function" required>
+                        </ul>
+                    </td>
+                </table>
                 <form action="upload.php" method="post" enctype="multipart/form-data">
                     <input lang="en" class="fileToUpload" type="file" value="Choose Image"
                            name="fileToUpload">
@@ -81,7 +88,7 @@
                 <label check> Beaver team has the commitment to protect your data and use them only
                     for internal data analysis.
                     <br>Please tick the box to proceed: <input type="checkbox" name="check">
-                </label><br>
+                </label><br><br>
                 <a href=CONFIRM_EMAIL.html>
                     <button>Confirm</button>
                 </a>

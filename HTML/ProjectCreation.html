@@ -35,27 +35,30 @@
     <i class="fas fa-times" onclick="hideMenu()"></i>
     <header>Beaver App</header>
     <br>
-    <a href="#home"><i class="fa fa-fw fa-home"></i> Home</a>
-    <a href="#dashboard"><i class="fas fa-qrcode"></i> Dashboard</a>
-    <a href="#activities"><i class="fas fa-stream"></i> Activities</a>
-    <a href="#calendar"><i class="fas fa-calendar-week"></i> Calendar</a>
-    <a href="#faqs"><i class="fas fa-question-circle"></i> FAQs</a>
-    <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-    <a class="logout" href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    <a href="initial_page_director.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="ProjectList.html"><i class="fas fa-folder"></i> Projects</a>
+    <a href="#activities"><i class="fas fa-cog"></i> Settings</a>
+    <a href="UpdatePersonalDataDirector.html"><i class="fas fa-user"></i> Account</a>
+    <a class="logout" href="login.html"><i class="fas fa-sign-out-alt"></i> Logout</a>
 </div>
 
 <script src="template-internal.js"></script>
 <div class="main">
     <h1>Project Creation Form</h1>
 
-    <form >
-        <label for="code">Project code</label><br>
+        <label for="code">Project code</label>
+        <br>
+        <br>
         <input type="code" id="code" size="77" name="code"><br><br>
 
-        <label for="name">Project Name</label><br>
+        <label for="name">Project Name</label>
+        <br>
+        <br>
         <input type="name" id="name" size="77"  name="Name"><br><br>
 
-        <label for="description">Description</label><br>
+        <label for="description">Description</label>
+        <br>
+        <br>
         <input type="description" id="description" size="77"  name="description"><br><br>
 
         <label for="customer">Choose a Customer:</label>
@@ -63,29 +66,35 @@
             <option value="customer 1">Customer 1</option>
             <option value="customer 2">Customer 2</option>
         </select>
-        <input type="submit"><br><br>
+        <br>
+        <br>
 
         <label for="typology">Choose a Typology:</label>
         <select id="typology" name="typology">
             <option value="Fixed Cost">Fixed Cost</option>
             <option value="Time and Materials">Time and Materials</option>
         </select>
-        <input type="submit"><br><br>
+        <br>
+        <br>
 
         <label for="businessSector">Choose a Business Sector:</label>
         <select id="businessSector" name="businessSector">
             <option value="sector 1">Sector 1</option>
             <option value="sector 2">Sector 2</option>
         </select>
-        <input type="submit"><br><br>
+        <br>
+        <br>
 
-        <label for="NumberOfSprints">NumberOfSprints</label><br>
+        <label for="NumberOfSprints">NumberOfSprints</label>
+        <br>
+        <br>
         <input type="number" id="NumberOfSprints" size="77"  name="NumberOfSprints"><br><br>
 
-        <label for="budget">Budget</label><br>
+        <label for="budget">Budget</label>
+        <br>
+        <br>
         <input type="number" id="budget" size="77"  name="bdget"><br><br>
-        <input type="submit">
-    </form>
+        <a href="ProjectList.html"><button class="button-update"><b>Create</b></button></a>
 
 </div>
 </body>
