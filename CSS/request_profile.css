@@ -79,35 +79,65 @@ header{
     cursor: pointer;
 }
 
+input{
+    font-size: 15px;
+    padding: 5px;
+}
+
 /* Resposividade */
 
+.toggle-menu{
+    position: absolute;
+    color: #ffffff;
+    font-size: 20px;
+    display: none;
+}
+
+.sidebar .fa-times{
+    position: absolute;
+    top: 10px;
+    right: 55px;
+    margin-left: 50px;
+    font-size: 40px;
+    color: #ffffff;
+    cursor: pointer;
+    display: none;
+}
+
+.sidebar .fa-times:hover{
+    color: #5584AC;
+}
+
 @media (max-width: 700px) {
-    .do-your-page h1{
-        font-size: 20px;
-    }
-    .nav-links ul li{
-        display: block;
-    }
-    .nav-links{
+    header{font-size: 15px;}
+    .sidebar a {font-size: 15px;}
+    .sidebar{
+        width: 130px;
         position: absolute;
-        background: #5584AC;
-        height: 100vh;
-        width: 200px;
         top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
+        left: -200px;
         transition: 1s;
+        z-index: 3;
     }
-    nav .fas{
+    .sidebar .fa-times{
         display: block;
-        color: #ffffff;
+    }
+    .sidebar header{
+        padding-top: 50px;
+    }
+    .toggle-menu{
+        display: block;
+        color: black;
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
+        z-index: 2;
     }
-    .nav-links ul{
-        padding: 30px;
+}
+
+@media (max-height: 450px) {
+    .logout{
+        position: relative;
     }
 
 }

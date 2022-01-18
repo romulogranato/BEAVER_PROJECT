@@ -74,6 +74,11 @@ header {
     cursor: pointer;
 }
 
+input{
+    font-size: 15px;
+    padding: 5px;
+}
+
 /* Responsividade */
 
 .toggle-menu {

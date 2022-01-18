@@ -118,10 +118,11 @@
     .login_screen {
         position: relative;
         background-color: rgba(34, 87, 126, 0.5);
-        padding: 145px 85px;
+        padding: 145px 100px;
         border-radius: 15px;
         color: whitesmoke;
         margin: 0;
+        text-align: center;
     }
 
     .login_screen h1{

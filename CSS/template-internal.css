@@ -55,6 +55,34 @@ header{
     margin-left: 160px; /* Same as the width of the sidenav */
     padding: 3% 5%;}
 
+.button-update{
+    padding: 1% 3%;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button-update:hover{
+    padding: 1% 3%;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #5584AC;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+input{
+    font-size: 15px;
+    padding: 5px;
+}
+
+
 /* Responsividade */
 
 .toggle-menu{

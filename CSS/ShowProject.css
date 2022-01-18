@@ -53,8 +53,75 @@ header{
 /* Style the main content */
 .main {
     margin-left: 160px; /* Same as the width of the sidenav */
-    padding: 0px 10px;
+    padding: 3% 5%;}
+
+.button-update{
+    padding: 1% 3%;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
+
+.button-update:hover{
+    padding: 1% 3%;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #5584AC;
+    color: #ffffff;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#ProjTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#ProjTable th, #ProjTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#ProjTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+}
+
+#ProjTable tr.header, #ProjTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+#ProjTable2 {
+    border-collapse: collapse; /* Collapse borders */
+    width: 40%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+}
+
+#ProjTable2 th, #ProjTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#ProjTable2 tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+}
+
+#ProjTable2 tr.header, #ProjTable2 tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+}
+
+
 
 /* Responsividade */
 
@@ -108,7 +175,10 @@ header{
         cursor: pointer;
         z-index: 2;
     }
-    .Tabela th, td {
-        border: 1px solid black;
+}
+
+@media (max-height: 450px) {
+    .logout{
+        position: relative;
     }
 }
