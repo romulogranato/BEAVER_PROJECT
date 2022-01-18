@@ -51,7 +51,7 @@ nav img {
     color: #5584AC;
 }
 
-.button {
+button {
     border: none;
     border-radius: 10px;
     padding: 10px 25px;
@@ -60,6 +60,7 @@ nav img {
     display: inline-block;
     font-size: 20px;
     margin: 4px 2px;
+
     transition-duration: 0.4s;
     cursor: pointer;
 }
