@@ -4,7 +4,9 @@
     padding: 0;
 }
 
-body{
+body {
+    font-family: 'Roboto', sans-serif;
+    color: black;
     background-color: #F6F2D4;
 }
 
