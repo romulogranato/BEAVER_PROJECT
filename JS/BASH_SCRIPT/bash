@@ -1,0 +1,57 @@
+#!/bin/bash
+#I'm file /var/www/cgi-bin/createProject # I'm used to create projects #
+
+echo ""
+BODY=/var/www/testbody.txt
+
+error_response() {
+echo ""
+echo "Status: 400 Bad Request "
+echo " Content-type: text/plain "
+echo "=="
+echo "!!! ERROR !!! "
+echo ""
+echo ""
+echo "${1}"
+exit
+}
+
+cat > $BODY
+ITERATOR="1";
+while read line || [ -n "$line" ]; do
+eval VAR$ITERATOR=$line;
+ITERATOR=$((${ITERATOR}+1));
+done < $BODY
+
+CODE=$VAR1
+echo "Project code=$CODE"
+NAME=$VAR2
+echo "Project name=$NAME"
+DESCRIPTION=$VAR3
+echo "DESCRIPTION=$DESCRIPTION"
+CUSTOMER=$VAR4
+echo "Customer=$CUSTOMER"
+TYPOLOGY=$VAR5
+echo "Typology=$TYPOLOGY"
+BUSINESSSECTOR=$VAR6
+echo "Business Sector=$BUSINESSSECTOR"
+NUMBEROFSPRINTS=$VAR7
+echo "Number of sprints=$NUMBEROFSPRINTS"
+BUDGET=$VAR8
+echo "Budget=$BUDGET"
+
+DIR=/var/www/projects/Project_1
+mkdir $DIR
+echo "${CODE}" > $DIR/$CODE
+echo "${NAME}" > $DIR/$NAME
+echo "${DESCRIPTION}" > $DIR/$DESCRIPTION
+echo "${CUSTOMER}" > $DIR/$CUSTOMER
+echo "${TYPOLOGY}" > $DIR/$TYPOLOGY
+echo "${BUSINESSSECTOR}" > $DIR/$BUSINESSSECTOR
+echo "${BUDGET}" > $DIR/$BUDGET
+fi
+fi
+echo "Content-type: text/plain"
+echo ""
+echo "New Project created"
+###

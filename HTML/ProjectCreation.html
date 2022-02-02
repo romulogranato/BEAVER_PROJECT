@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>
+
+    function sendRequest() {
+        var request = new XMLHttpRequest();
+
+        request.open("POST", "/cgi-bin/projectCreation", true);
+        request.send(code.value + "\n" + name.value + "\n"
+            + description.value + "\n" + typology.value + "\n" + businessSector.value + "\n"
+            + numberOfSprints.value + "\n" + budget.value);
+
+    }
+
+</script>
 <head>
     <meta charset="uft-8">
     <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords"/>
@@ -7,7 +20,6 @@
           name="author">
 
     <title>BEAVER APP</title>
-
 
     <!-- CSS Stylesheets -->
     <link href="../CSS/ProjectCreation.css" rel="stylesheet">
@@ -46,55 +58,48 @@
 <div class="main">
     <h1>Project Creation Form</h1>
 
-        <label for="code">Project code</label>
-        <br>
-        <br>
-        <input type="code" id="code" size="77" name="code"><br><br>
+    <label for="code">Project code</label>
+    <br>
+    <br>
+    <input type="code" id="code" size="77" name="code"><br><br>
 
-        <label for="name">Project Name</label>
-        <br>
-        <br>
-        <input type="name" id="name" size="77"  name="Name"><br><br>
+    <label for="name">Project Name</label>
+    <br>
+    <br>
+    <input type="name" id="name" size="77" name="Name"><br><br>
 
-        <label for="description">Description</label>
-        <br>
-        <br>
-        <input type="description" id="description" size="77"  name="description"><br><br>
+    <label for="description">Description</label>
+    <br>
+    <br>
+    <input type="description" id="description" size="77" name="description"><br><br>
 
-        <label for="customer">Choose a Customer:</label>
-        <select id="customer" name="customer">
-            <option value="customer 1">Customer 1</option>
-            <option value="customer 2">Customer 2</option>
-        </select>
-        <br>
-        <br>
+    <label for="customer">customer</label>
+    <br>
+    <br>
+    <input type="customer" id="customer" size="77" name="customer"><br><br>
 
-        <label for="typology">Choose a Typology:</label>
-        <select id="typology" name="typology">
-            <option value="Fixed Cost">Fixed Cost</option>
-            <option value="Time and Materials">Time and Materials</option>
-        </select>
-        <br>
-        <br>
+    <label for="typology">typology</label>
+    <br>
+    <br>
+    <input type="typology" id="typology" size="77"  name="typology"><br><br>
 
-        <label for="businessSector">Choose a Business Sector:</label>
-        <select id="businessSector" name="businessSector">
-            <option value="sector 1">Sector 1</option>
-            <option value="sector 2">Sector 2</option>
-        </select>
-        <br>
-        <br>
+    <label for="businessSector">businessSector</label>
+    <br>
+    <br>
+    <input type="businessSector" id="businessSector" size="77"  name="businessSector"><br><br>
 
-        <label for="NumberOfSprints">NumberOfSprints</label>
-        <br>
-        <br>
-        <input type="number" id="NumberOfSprints" size="77"  name="NumberOfSprints"><br><br>
+    <label for="NumberOfSprints">NumberOfSprints</label>
+    <br>
+    <br>
+    <input type="number" id="NumberOfSprints" size="77" name="NumberOfSprints"><br><br>
 
-        <label for="budget">Budget</label>
-        <br>
-        <br>
-        <input type="number" id="budget" size="77"  name="bdget"><br><br>
-        <a href="ProjectList.html"><button class="button-update"><b>Create</b></button></a>
+    <label for="budget">Budget</label>
+    <br>
+    <br>
+    <input type="number" id="budget" size="77" name="bdget"><br><br>
+    <a href="ProjectList.html">
+        <button class="button-update" onclick="sendRequest()"><b>Create</b></button>
+    </a>
 
 </div>
 </body>
