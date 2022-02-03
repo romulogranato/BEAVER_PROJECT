@@ -5,7 +5,7 @@
     function sendRequest() {
         var request = new XMLHttpRequest();
 
-        request.open("POST", "/cgi-bin/projectCreation", true);
+        request.open("POST", "/cgi-bin/createProject", true);
         request.send(code.value + "\n" + Name.value + "\n"
             + description.value + "\n" + customer.value + "\n" + typology.value + "\n" + businessSector.value + "\n"
             + numberOfSprints.value + "\n" + budget.value);
@@ -16,7 +16,7 @@
 <head>
     <meta charset="uft-8">
     <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords"/>
-    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
+    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
           name="author">
 
     <title>BEAVER APP</title>
@@ -88,18 +88,17 @@
     <br>
     <input type="businessSector" id="businessSector" size="77"  name="businessSector"><br><br>
 
-    <label for="NumberOfSprints">NumberOfSprints</label>
+    <label for="numberOfSprints">numberOfSprints</label>
     <br>
     <br>
-    <input type="number" id="NumberOfSprints" size="77" name="NumberOfSprints"><br><br>
+    <input type="numberOfSprints" id="numberOfSprints" size="77"  name="numberOfSprints"><br><br>
 
-    <label for="budget">Budget</label>
+    <label for="budget">budget</label>
     <br>
     <br>
-    <input type="number" id="budget" size="77" name="bdget"><br><br>
-    <a href="ProjectList.html">
-        <button class="button-update" onclick="sendRequest()"><b>Create</b></button>
-    </a>
+    <input type="budget" id="budget" size="77"  name="budget"><br><br>
+
+    <button class="button-update" onclick="sendRequest()"><b>Create</b></button>
 
 </div>
 </body>

@@ -2,7 +2,7 @@
 #I'm file /var/www/cgi-bin/createProject # I'm used to create projects #
 
 echo ""
-BODY=/var/www/testbody.txt
+BODY=/var/www/project.txt
 
 error_response() {
 echo ""
@@ -15,6 +15,13 @@ echo ""
 echo "${1}"
 exit
 }
+
+if [ "$REQUEST_METHOD" != "POST" ]; then
+echo "Please use POST Method"
+fi
+
+if [ "$REQUEST_METHOD" == "POST" ]; then
+if [ -n "$CONTENT_LENGTH" ]; then
 
 cat > $BODY
 ITERATOR="1";
@@ -40,7 +47,7 @@ echo "Number of sprints=$NUMBEROFSPRINTS"
 BUDGET=$VAR8
 echo "Budget=$BUDGET"
 
-DIR=/var/www/projects/Project_1
+DIR=/var/www/$CODE
 mkdir $DIR
 echo "${CODE}" > $DIR/$CODE
 echo "${NAME}" > $DIR/$NAME
@@ -49,9 +56,12 @@ echo "${CUSTOMER}" > $DIR/$CUSTOMER
 echo "${TYPOLOGY}" > $DIR/$TYPOLOGY
 echo "${BUSINESSSECTOR}" > $DIR/$BUSINESSSECTOR
 echo "${BUDGET}" > $DIR/$BUDGET
-fi
-fi
+
+rm $BODY
+
 echo "Content-type: text/plain"
 echo ""
 echo "New Project created"
-###
+
+fi
+fi
