@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<script>
+
+    function sendRequest() {
+        var request = new XMLHttpRequest();
+
+        request.open("GET", "/cgi-bin/createProject", true);
+        request.send(code.value + "\n" + Name.value + "\n"
+            + description.value + "\n" + customer.value + "\n" + typology.value + "\n" + businessSector.value + "\n"
+            + numberOfSprints.value + "\n" + budget.value);
+
+    }
+
+</script>
 <head>
     <meta charset="uft-8">
     <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords"/>
@@ -60,28 +73,12 @@
                 <th>End Date</th>
                 <th>Status</th>
             </tr>
-            <tr>
-                <td data-column="Code"><a href="ShowProject.html">PM001</a></td>
-                <td data-column="Project Name"><a href="ShowProject.html"> PMprototype</a></td>
-                <td data-column="Description">This is a project management system
-                    prototype.</td>
-                <td data-column="Start Date">03/01/2022</td>
-                <td data-column="End Date">30/06/2022</td>
-                <td data-column="Status">Planned</td>
-            </tr>
-            <tr>
-                <td data-column="Code"><a href="ShowProject.html">PM002</a></td>
-                <td data-column="Project Name"><a href="ShowProject.html">PMprototype2</a></td>
-                <td data-column="Description">This is the second PMS prototype.</td>
-                <td data-column="Start Date">30/06/2022</td>
-                <td data-column="End Date">20/12/2022</td>
-                <td data-column="Status">Planned</td>
-            </tr>
+
         </table>
     </div>
     <br>
     <br>
-    <a href="ProjectCreation.html"><button class="button-update"><b>Create Project</b></button></a>
+    <a href="ProjectCreation.html"><button class="button-update"><b>Get Project List</b></button></a>
 </div>
 
 

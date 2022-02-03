@@ -47,7 +47,7 @@ echo "Number of sprints=$NUMBEROFSPRINTS"
 BUDGET=$VAR8
 echo "Budget=$BUDGET"
 
-DIR=/var/www/$CODE
+DIR=/var/www/projects/Project_$CODE
 mkdir $DIR
 echo "${CODE}" > $DIR/$CODE
 echo "${NAME}" > $DIR/$NAME

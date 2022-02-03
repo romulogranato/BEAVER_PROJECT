@@ -1,0 +1,7 @@
+#!/bin/bash
+#I'm file /var/www/cgi-bin/listProjects # I'm used to get projects
+
+A=$(ls /var/www/projects)
+echo "Content-type: text/plain"
+echo ""
+echo "$A"
