@@ -5,10 +5,13 @@
     function sendRequest() {
         var request = new XMLHttpRequest();
 
-        request.open("GET", "/cgi-bin/createProject", true);
-        request.send(code.value + "\n" + Name.value + "\n"
-            + description.value + "\n" + customer.value + "\n" + typology.value + "\n" + businessSector.value + "\n"
-            + numberOfSprints.value + "\n" + budget.value);
+        request.open("GET", "/cgi-bin/listProjects", true);
+        request.send();
+        request.onload=function okCase() {
+            if(this.status==200) msg="<h3>Your projects: " + this.responseText + "</h3>";
+            else msg="<h3>Sorry, error reported by the backend " + this.responseText + "</h3>";
+            document.getElementById("result").innerHTML = msg;
+        }
 
     }
 
@@ -16,7 +19,7 @@
 <head>
     <meta charset="uft-8">
     <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords"/>
-    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexxandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
+    <meta content="Ivan Araujo de Aguiar, Ana Maria Teixeira Guedes, Nuno Alexandre Barbeira Gonçalves, Cristiana Daniela da Silva Carvalho, Rogério Manuel Silva Moreira, Paulo Xavier Andres Cunha, David Torres Gonçalves, Romulo de Paiva Granato, Joana Isabel Miguel da Silva Fangueiro, Carolina Lebre Santos Silva"
           name="author">
 
     <title>BEAVER APP</title>
