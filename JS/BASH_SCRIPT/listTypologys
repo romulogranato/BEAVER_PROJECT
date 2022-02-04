@@ -1,0 +1,20 @@
+#!/bin/bash
+#I'm file /var/www/cgi-bin/listProjects # I'm used to get projects
+
+error_response() {
+echo ""
+echo "Status: 400 Bad Request "
+echo " Content-type: text/plain "
+echo "=="
+echo "!!! ERROR !!! "
+echo ""
+echo ""
+echo "${1}"
+exit
+}
+
+A=$(ls /var/www/typology)
+echo "Content-type: text/plain"
+echo ""
+echo "$A"
+##
