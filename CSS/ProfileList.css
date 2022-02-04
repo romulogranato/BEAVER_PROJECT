@@ -150,24 +150,24 @@ header {
     margin-bottom: 12px; /* Add some space below the input */
 }
 
-#ProjTable {
+#TypologyTable {
     border-collapse: collapse; /* Collapse borders */
     width: 25%; /* Full-width */
     border: 1px solid #ddd; /* Add a grey border */
     font-size: 18px; /* Increase font-size */
 }
 
-#ProjTable th, #ProjTable td {
+#TypologyTable th, #TypologyTable td {
     text-align: left; /* Left-align text */
     padding: 12px; /* Add padding */
 }
 
-#ProjTable tr {
+#TypologyTable tr {
     /* Add a bottom border to all table rows */
     border-bottom: 1px solid #ddd;
 }
 
-#ProjTable tr.header, #ProjTable tr:hover {
+#TypologyTable tr.header, #TypologyTable tr:hover {
     /* Add a grey background color to the table header and on hover */
     background-color: #f1f1f1;
 }

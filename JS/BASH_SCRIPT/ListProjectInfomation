@@ -1,0 +1,28 @@
+#!/bin/bash
+#I'm file /var/www/cgi-bin/listProjectInformation # I'm used to get project information
+
+echo ""
+
+error_response() {
+echo ""
+echo "Status: 400 Bad Request "
+echo " Content-type: text/plain "
+echo "=="
+echo "!!! ERROR !!! "
+echo ""
+echo ""
+echo "${1}"
+exit
+}
+
+if [ "$REQUEST_METHOD" == "POST" ]; then
+if [ -n "$CONTENT_LENGTH" ]; then
+
+A=$(ls /var/www/projects/"$CONTENT_LENGTH")
+echo "Content-type: text/plain"
+echo ""
+echo "$A"
+
+fi
+fi
+##

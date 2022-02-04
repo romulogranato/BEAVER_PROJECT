@@ -21,24 +21,21 @@ echo "Please use POST Method"
 fi
 
 if [ "$REQUEST_METHOD" == "POST" ]; then
-if [ -n "$CONTENT_LENGTH" ]; then
+if [ -n "$CONTENT_LENGTH" ]; then cat > $BODY
 
-cat > $BODY
-# shellcheck disable=SC2162
-read line || [ -n "$line" ]
-eval VAR="$line" < $BODY
+NAME=$(cat "$BODY")
 
-NAME=$VAR
 echo "New Typology=$NAME"
 
 DIR=/var/www/typology/$NAME
-mkdir $DIR
+mkdir "$DIR"
 
 rm $BODY
 
 echo "Content-type: text/plain"
 echo ""
-echo "New Project created"
+echo "New Typology created"
 
 fi
 fi
+
