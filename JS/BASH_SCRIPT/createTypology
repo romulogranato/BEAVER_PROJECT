@@ -1,0 +1,44 @@
+#!/bin/bash
+#I'm file /var/www/cgi-bin/createProject # I'm used to create projects #
+
+echo ""
+BODY=/var/www/typology.txt
+
+error_response() {
+echo ""
+echo "Status: 400 Bad Request "
+echo " Content-type: text/plain "
+echo "=="
+echo "!!! ERROR !!! "
+echo ""
+echo ""
+echo "${1}"
+exit
+}
+
+if [ "$REQUEST_METHOD" != "POST" ]; then
+echo "Please use POST Method"
+fi
+
+if [ "$REQUEST_METHOD" == "POST" ]; then
+if [ -n "$CONTENT_LENGTH" ]; then
+
+cat > $BODY
+# shellcheck disable=SC2162
+read line || [ -n "$line" ]
+eval VAR="$line" < $BODY
+
+NAME=$VAR
+echo "New Typology=$NAME"
+
+DIR=/var/www/typology/$NAME
+mkdir $DIR
+
+rm $BODY
+
+echo "Content-type: text/plain"
+echo ""
+echo "New Project created"
+
+fi
+fi

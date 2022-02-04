@@ -1,5 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<script>
+
+    function sendRequest() {
+        var request = new XMLHttpRequest();
+
+        request.open("POST", "/cgi-bin/createTypology", true);
+        request.send(description.value);
+
+    }
+
+</script>
+
 <head>
     <meta charset="uft-8">
     <meta content="beaver, project manegement, project,,,,,EDITAR,,,," name="keywords" />
@@ -44,11 +57,10 @@
 <div class="main">
     <h1>Create Project Tipology</h1>
     <br>
-    <input class="description" type="description" size = 77 placeholder="Please enter the tipology description">
+    <input class="description" id="description" type="description" size = 77 placeholder="Please enter the tipology description">
     <br><br>
-    <a href="settings.html"><button class="button-update"><b>Create Typology</b></button></a>
+    <a href="settings.html"><button class="button-update" onclick="sendRequest()"><b>Create Typology</b></button></a>
 </div>
-
 
 <script src="../JS/template-internal.js"></script>
 </body>

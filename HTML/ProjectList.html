@@ -2,6 +2,17 @@
 <html lang="en">
 <script>
 
+    function addRow(x) {
+        let description = x;
+        let temp = description.split("\n");
+        for (let i = 0; i < temp.length - 1; i++) {
+
+            let code = "<i class ='bx bx-id-card'></i>";
+            let table
+            
+        }
+    }
+
     function sendRequest() {
         var request = new XMLHttpRequest();
 
@@ -81,7 +92,8 @@
     </div>
     <br>
     <br>
-    <a href="ProjectCreation.html"><button class="button-update"><b>Get Project List</b></button></a>
+    <button class="button-update"><b>Get Project List</b></button></a>
+    <a href="ProjectCreation.html"><button class="button-update"><b>Create Project</b></button></a>
 </div>
 
 
