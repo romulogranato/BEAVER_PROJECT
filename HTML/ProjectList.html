@@ -2,26 +2,35 @@
 <html lang="en">
 <script>
 
-    function addRow(x) {
-        let description = x;
-        let temp = description.split("\n");
-        for (let i = 0; i < temp.length - 1; i++) {
-
-            let code = "<i class ='bx bx-id-card'></i>";
-            let table
-            
-        }
-    }
-
     function sendRequest() {
+
         var request = new XMLHttpRequest();
+
+        function addRow(x) {
+            let temp = x.split("\n");
+            for (let i = 0; i < temp.length - 1; i++) {
+
+                let table = document.getElementById("ProjTable");
+                let newRow = table.insertRow(i+1);
+                let cel1 = newRow.insertCell(0);
+                cel1.innerHTML = temp[i];
+            }
+        }
 
         request.open("GET", "/cgi-bin/listProjects", true);
         request.send();
-        request.onload=function okCase() {
-            if(this.status==200) msg="<h3>Your projects: " + this.responseText + "</h3>";
-            else msg="<h3>Sorry, error reported by the backend " + this.responseText + "</h3>";
-            document.getElementById("result").innerHTML = msg;
+
+        request.onload = function okCase() {
+            if (this.status === 200) addRow(this.responseText)
+        }
+
+
+        request.ontimeout=function timeoutCase() {
+            document.getElementById("result").innerHTML = "<h3>Sorry, no response from the backend.</h3>";
+        }
+
+        request.onerror=function errorCase() {
+            document.getElementById("result").innerHTML = "<h3>Sorry, network error.</h3>";
         }
 
     }
@@ -74,30 +83,27 @@
 
     <div class="tabl">
         <div style="width: 20%">
-            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search for Project Name..">
+            <input type="text" id="searchInput" onkeyup="myFunction()" placeholder="Search Project">
         </div>
         <br>
         <br>
         <table id="ProjTable">
             <tr>
                 <th>Code</th>
-                <th>Project Name</th>
-                <th>Description</th>
-                <th>Start Date</th>
-                <th>End Date</th>
-                <th>Status</th>
             </tr>
 
         </table>
     </div>
     <br>
     <br>
-    <button class="button-update"><b>Get Project List</b></button></a>
-    <a href="ProjectCreation.html"><button class="button-update"><b>Create Project</b></button></a>
+    <button class="button-update" onclick="sendRequest()"><b>Get Project List</b></button>
+    </a>
+    <a href="ProjectCreation.html">
+        <button class="button-update"><b>Create Project</b></button>
+    </a>
 </div>
 
-
-
 <script src="../JS/template-internal.js"></script>
+
 </body>
 </html>
